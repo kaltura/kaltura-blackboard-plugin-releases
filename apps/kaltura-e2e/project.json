@@ -1,0 +1,28 @@
+{
+  "root": "apps/kaltura-e2e",
+  "sourceRoot": "apps/kaltura-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/kaltura-e2e/cypress.json",
+        "devServerTarget": "kaltura:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "kaltura:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/kaltura-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["kaltura"]
+}

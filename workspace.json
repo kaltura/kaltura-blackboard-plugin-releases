@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "kaltura": "apps/kaltura",
+    "kaltura-e2e": "apps/kaltura-e2e"
+  }
+}
